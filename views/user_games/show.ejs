@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User | <%= user.username %></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/show.css"/>
+    </head>
+
+    <body>
+
+        <div class="container-xxl">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand">USER DETAILS</a>
+                <div class="navbar-nav ms-auto">
+                    <a class="btn btn-outline-light" href="/users">Return to all users</a>
+                </div>   
+            </nav>
+            <br>
+            <h5>This is a view-only page</h5>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-5">
+                    <input type="text" readonly class="form-control" value="<%= user.id %>">
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-5">
+                    <input type="text" readonly class="form-control" value="<%= user.username %>">
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-5">
+                    <input type="text" readonly class="form-control" value="<%= user.password %>">
+                </div>
+            </div>
+            <br>
+            <br>
+            <a class="btn btn-warning btn-lg" href="/users/update/<%= user.id %>">Update this user</a>
+            <br>
+            <br>
+            <a class="btn btn-danger btn-lg" href="/users/delete/<%= user.id %>">Delete this user</a>
+        </div>
+
+    </body>
+</html>

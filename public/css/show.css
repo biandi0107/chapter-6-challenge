@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body { 
+    background-image: url(/img/home/requirements.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+}
+
+h5 {
+    color: rgb(160, 160, 160);
+}
+
+.col-form-label {
+    color: white;
+    font-size: large;
+}
+
+.form-control {
+    color: black;
+}

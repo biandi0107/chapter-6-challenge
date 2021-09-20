@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body { 
+    background-image: url(/img/home/main-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+}
+
+.col-form-label {
+    color: white;
+    font-size: large;
+}
+
+.input {
+    font-family: "Arial", sans-serif !important;
+}

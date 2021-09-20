@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Users</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/index.css"/>
+    </head>
+
+    <body>
+        <div class="container-xxl">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand">ALL USERS</a>
+                <div class="navbar-nav ms-auto">
+                    <a class="btn btn-warning" href="/users/create">Create user</a>
+                    <a class="btn btn-outline-light" href="/">Return home</a>
+                </div>   
+            </nav>
+            <br>
+            <table class="table table-striped table-dark table-bordered" style="width:100%">
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Read More</th>
+                </tr>
+                <% users.forEach(i => { %>
+                <tr class="table-data">
+                    <td><%= i.id %></td>
+                    <td><%= i.username %></td>
+                    <td><%= i.password %></td>
+                    <td><a class="link-warning" href="/users/update/<%= i.id %>">Update <%= i.username %></a></td>
+                    <td><a class="link-danger" href="/users/delete/<%= i.id %>">Delete <%= i.username %></a></td>
+                    <td><a class="link-warning" href="/users/<%= i.id %>">Read more about <%= i.username %></a></td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+    </body>
+</html>

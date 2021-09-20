@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href=""/>
+        <style>
+        body {
+            background-color: #f3f4f5;
+        }
+        .first {
+            background-color: #a9bfe7;
+        }
+        .navbar-brand {
+            font-size: xx-large;
+        }
+        </style>
+    </head>
+
+    <body>
+        <section class="first">
+            <div class="container-sm">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand">ADMIN LOGIN</a>
+                    <div class="navbar-nav ms-auto">
+                        <a class="btn btn-outline-dark" href="/">Return home</a>
+                    </div>   
+                </nav>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-md-7">
+                        <form method="POST" action="/login">
+                            <label for="email">Email</label>
+                            <br>
+                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <br>
+                            <label for="password">Password</label>
+                            <br>
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <% if (message){ %> 
+                                <span style="color: red;">
+                                    <%= message %>
+                                </span>
+                            <% } %>
+                            <br>
+                            <button type ="submit" class="btn btn-primary btn-lg">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,64L40,74.7C80,85,160,107,240,101.3C320,96,400,64,480,80C560,96,640,160,720,192C800,224,880,224,960,197.3C1040,171,1120,117,1200,106.7C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+        </section>
+    </body>
+</html>

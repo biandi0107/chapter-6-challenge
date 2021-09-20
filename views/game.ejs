@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/game.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <ul>
+                <li class="home"><a href="/">&lt;</a></li>
+                <li class="logo"><a><img src="/img/game/logo.png"></a></li>
+                <li class="title"><a>ROCK PAPER SCISSORS</a></li>
+            </ul>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-4">
+                    <h1 class="title-p">PLAYER 1</h1>
+                    <ul class="player">
+                        <li id="batu-p-id"><img src="/img/game/batu.png" class="batu-p"></li>
+                        <li id="kertas-p-id"><img src="/img/game/kertas.png" class="kertas-p"></li>
+                        <li id="gunting-p-id"><img src="/img/game/gunting.png" class="gunting-p"></li>
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <div class="hasil">
+                        <h1 class="vs">VS</h1>
+                        <div class="result"></div>
+                        <img src="/img/game/refresh.png" onClick="window.location.reload();" class="refresh">
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <h1 class="title-c">COM</h1>
+                    <ul class="computer">
+                        <li id="batu-c-id"><img src="/img/game/batu.png" class="batu-c"></li>
+                        <li id="kertas-c-id"><img src="/img/game/kertas.png" class="kertas-c"></li>
+                        <li id="gunting-c-id"><img src="/img/game/gunting.png" class="gunting-c"></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <script type="text/javascript" src="/js/script.js"></script>
+
+    </body>
+</html>

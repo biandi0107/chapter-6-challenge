@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update User | <%= user.username %></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/update.css"/>
+    </head>
+
+    <body>
+
+        <div class="container-xxl">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand">UPDATE USER</a>
+                <div class="navbar-nav ms-auto">
+                    <a class="btn btn-outline-light" href="/users/<%= user.id %>">Return to <%= user.username %></a>
+                </div>   
+            </nav>
+            <br>
+            <form method="POST" action="/users/update/<%= user.id %>">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Old Username</label>
+                    <div class="col-sm-5">
+                        <input type="text" readonly class="form-control" value="<%= user.username %>">
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="username" class="col-sm-2 col-form-label">New Username</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="username" class="form-control input" required>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Old Password</label>
+                    <div class="col-sm-5">
+                        <input type="text" readonly class="form-control" value="<%= user.password %>">
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">New Password</label>
+                    <div class="col-sm-5">
+                        <input type="password" name="password" class="form-control input" required>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-warning btn-lg">Update</button>
+            </form>
+        </div>
+        
+    </body>
+</html>

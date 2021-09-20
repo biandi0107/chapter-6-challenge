@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create User</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/create.css"/>
+    </head>
+
+    <body>
+        
+        <div class="container-xxl">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand">CREATE USER</a>
+                <div class="navbar-nav ms-auto">
+                    <a class="btn btn-outline-light" href="/users">Return to all users</a>
+                </div>   
+            </nav>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <form method="POST" action="/users">
+                        <label class="col-form-label" for="username">Username</label>
+                        <br>
+                        <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        <br>
+                        <label class="col-form-label" for="password">Password</label>
+                        <br>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        <br>
+                        <button type="submit" class="btn btn-warning btn-lg">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
